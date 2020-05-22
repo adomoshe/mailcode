@@ -1,0 +1,33 @@
+{
+  "name": "mailcode",
+  "version": "1.0.0",
+  "description": "lightweight typescript library to use postalcode",
+  "main": "index.js",
+  "dependencies": {
+    "csv-parser": "^2.3.2",
+    "systemjs": "^6.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.5",
+    "eslint": "^7.0.0"
+  },
+  "scripts": {
+    "start": "tsc && node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adomoshe/mailcode.git"
+  },
+  "keywords": [
+    "postalcode",
+    "javascript",
+    "typescript"
+  ],
+  "author": "Adoran Moshe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adomoshe/mailcode/issues"
+  },
+  "homepage": "https://github.com/adomoshe/mailcode#readme"
+}
