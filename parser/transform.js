@@ -2,7 +2,7 @@ var csv = require('csv-parser');
 var fs = require('fs');
 ;
 var data = {};
-fs.createReadStream('uszips.csv')
+fs.createReadStream('parser/uszips.csv')
     .pipe(csv())
     .on('data', function (row) {
     var parsedRow = {};
@@ -12,10 +12,10 @@ fs.createReadStream('uszips.csv')
     parsedRow.stateID = row.state_id;
     parsedRow.state = row.state_name;
     parsedRow.population = Number(row.population);
-    parsedRow.density = Number(row.density);
-    parsedRow.county = row.country_name;
+    // parsedRow.density = Number(row.density);
+    // parsedRow.county = row.country_name;
     parsedRow.counties = row.county_names_all;
-    parsedRow.military = row.military === 'FALSE' ? false : true;
+    // parsedRow.military = row.military === 'FALSE' ? false : true;
     parsedRow.timezone = row.timezone;
     data[row.zip] = parsedRow;
 })

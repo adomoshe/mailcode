@@ -1,8 +1,7 @@
-const zipcodes = require('./zipcodes.json');
+const zipcodes = require('./assets/zipcodes.json');
 
-
-const handleError = (error: string): object => {
-  throw new Error(error)
+const handleError = (error: string): any => {
+  console.warn(error)
 };
 
 const checkZipType = (zip: string | number): string => {
@@ -15,7 +14,7 @@ const checkZipType = (zip: string | number): string => {
   }
 }
 
-export const getLocationFromZip = (zip: string | number): object => {
+const getLocationFromZip = (zip: string | number): object => {
   let location: object;
   let zipString: string;
 
@@ -28,9 +27,11 @@ export const getLocationFromZip = (zip: string | number): object => {
   }
   location = zipcodes[zip];
   if (!location) {
-    return handleError(`Location for zip: ${zip} was not found`);
+    return handleError(`Location for zip '${zip}' was not found`);
   }
   return location;
 }
 
-console.log(getLocationFromZip(94588))
+module.exports = {
+  getLocationFromZip,
+}

@@ -8,10 +8,10 @@ interface ParsedRow {
     stateID: string
     state: string
     population: number
-    density: number
-    county: string
+    // density: number
+    // county: string
     counties: string
-    military: boolean
+    // military: boolean
     timezone: string
 };
 
@@ -26,10 +26,10 @@ fs.createReadStream('uszips.csv')
       parsedRow.stateID = row.state_id;
       parsedRow.state = row.state_name;
       parsedRow.population = Number(row.population);
-      parsedRow.density = Number(row.density);
-      parsedRow.county = row.country_name;
+      // parsedRow.density = Number(row.density);
+      // parsedRow.county = row.country_name;
       parsedRow.counties = row.county_names_all;
-      parsedRow.military = row.military === 'FALSE' ? false : true;
+      // parsedRow.military = row.military === 'FALSE' ? false : true;
       parsedRow.timezone = row.timezone;
 
       data[row.zip] = parsedRow;

@@ -1,18 +1,17 @@
 {
   "name": "mailcode",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "lightweight typescript library to use postalcode",
   "main": "index.js",
-  "dependencies": {
-    "csv-parser": "^2.3.2",
-    "systemjs": "^6.3.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^14.0.5",
+    "csv-parser": "^2.3.2",
     "eslint": "^7.0.0"
   },
   "scripts": {
     "start": "tsc && node index.js",
+    "dry-run": "npm publish --dry-run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,7 +21,9 @@
   "keywords": [
     "postalcode",
     "javascript",
-    "typescript"
+    "typescript",
+    "zipcode",
+    "zipcode-us"
   ],
   "author": "Adoran Moshe",
   "license": "ISC",
