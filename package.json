@@ -2,7 +2,8 @@
   "name": "mailcode",
   "version": "1.0.3",
   "description": "lightweight typescript library to use postalcode",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "dependencies": {},
   "devDependencies": {
     "@types/node": "^14.0.5",
@@ -10,7 +11,7 @@
     "eslint": "^7.0.0"
   },
   "scripts": {
-    "start": "tsc && node index.js",
+    "build": "tsc",
     "dry-run": "npm publish --dry-run",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
