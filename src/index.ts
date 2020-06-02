@@ -12,6 +12,7 @@ const checkZipType = (zip: string | number): string => {
   } else {
     handleError('zip can be one of (string|number)');
     return '';
+    
   }
 }
 
